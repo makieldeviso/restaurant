@@ -1,4 +1,129 @@
-h1#restName {
-    color: yellow;
-    font-size: 2rem;
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat&family=Righteous&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--common-font-style);
 }
+
+:root {
+    --title-font-size: calc(1.8rem + 1vw);
+    --header-font-size: calc(0.8rem + 1vw);
+    --slogan-font-size: calc(2rem + 1vw);
+    --title-font-style: 'Kaushan Script', sans-serif;
+    --common-font-style: 'Montserrat', sans-serif;
+    --slogan-font-style: 'Righteous', sans-serif;
+    
+    --common-padding: calc(5px + 1vw);
+    --common-margin: calc(10px + 1vw);
+    --logo-size: calc(45px + 1vw);
+
+    --base-red: #DA0037;
+    --base-gray: #444444;
+    --base-black: #171717;
+    --base-brown: #F9DBBB;
+
+    --base-yellow: #FFDE00;
+    --light-yellow: #FFFAE7;
+    --light-gray: #EDEDED;
+
+}
+
+body {
+    position: relative;
+}
+
+
+/* HEADER (start) */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+}
+
+
+div#page-title {
+    display: grid;
+    padding-right: var(--logo-size);
+    grid-template-columns: max-content 1fr;
+    width: 100%;
+    background-color: var(--base-black);
+    padding: var(--common-padding);
+    padding-right: calc(var(--common-padding) + var(--logo-size));
+}   
+
+img#logo {
+    width: var(--logo-size);
+    height: var(--logo-size);
+    object-fit: contain;
+    border-radius: 50%;
+    border: 1px solid red;
+    background-color: var(--base-black);
+}
+
+h1#resto-name {
+    font-size: var(--title-font-size);
+    font-family: var(--title-font-style);
+    color: var(--light-yellow);
+    text-align: center;
+}
+
+div#tab-btns {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    justify-content: center;
+    gap: calc(var(--common-margin) * 2);
+    width: 100%;
+    background-color: rgba(255, 250, 231, 0.9);
+    padding: calc(var(--common-padding) * 0.5);
+}
+
+div#tab-btns button {
+    font-family: var(--common-font-style);
+    padding: calc(var(--common-padding) * 0.5);
+    font-size: var(--header-font-size);
+    border: none;
+    background-color: transparent;
+    border: none;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+}
+
+div#tab-btns button:hover {
+    border-bottom: 2px solid var(--base-black);
+}
+/* HEADER (end) */
+
+/* MAIN (start) */
+main {
+    margin-top: var(--common-margin);
+}
+
+div#content {
+    border: 1px solid black;
+    width: 95%;
+    margin: auto;
+    padding: var(--common-padding);
+}
+
+main h3 {
+    font-family: var(--slogan-font-style);
+    font-size: var(--slogan-font-size);
+}
+
+img.home-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: var(--common-margin) 0;
+}
+
+
+
+/* MAIN (end) */
