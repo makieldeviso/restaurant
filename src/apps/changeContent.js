@@ -1,3 +1,7 @@
+import { addMenuList } from "./addMenuList";
+import { menuList } from "./menuList";
+
+
 const changeContent = (function () {
     // Toggle between tabs
     const changeTab = function () {
@@ -25,12 +29,36 @@ const changeContent = (function () {
         };
 
         // Content Events Function
-        // TEMPORARY !!!!!!!!!!
         const changeContent = function (button) {
-            console.log(button.value);
-            const homeContent = document.querySelector('div#home-content');
+            const newPage = button.value;
 
-            homeContent.style.display = 'none';
+            const mainContent = document.querySelector('div#content');
+
+            // Removes the direct div child of mainContent before appending new tab
+            const contentContainer = document.querySelector('div#content>div');
+            mainContent.removeChild(contentContainer);
+
+            // Appends new tab according to button Press
+            if (newPage === 'home') {
+                mainContent.setAttribute('data-content', 'home');
+
+            } else if (newPage === 'menu') {
+                // Create menu-content div container
+                addMenuList.createContainer();
+
+                // Appends the section categories
+                menuList.addMenuCategory();
+
+                // Adds menu items into corresponding section category
+                menuList.addMenuItems();
+
+                // Set attribute of the mainContainer
+                mainContent.setAttribute('data-content', 'menu');
+
+            } else if (newPage === 'contact') {
+                mainContent.setAttribute('data-content', 'contact');
+            }
+
         };
 
         // Executes functions
