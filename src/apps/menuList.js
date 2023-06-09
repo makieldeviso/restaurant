@@ -34,15 +34,11 @@ const menuList = (function () {
 
 
     const addMenuCategory = function () {
-        categories.forEach(category => {
-            addMenuList.assembleDetails(category);
-        });
+        addMenuList.assembleDetails(categories);
     }    
 
     const addMenuItems = function () {
-        menuItems.forEach(item => {
-            addMenuList.addItem(item);
-        });
+        addMenuList.addItems(menuItems);
     }
 
     return {addMenuCategory, addMenuItems};

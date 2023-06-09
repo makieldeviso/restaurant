@@ -63,28 +63,32 @@ const addMenuList = (function () {
         return itemContainer;
     }
 
-    const assembleDetails = function (category) {
-        const menuContent = document.querySelector('div#menu-content');
+    const assembleDetails = function (categoryArray) {
 
-        const categorySection = createCategory(category);
-        const header = createHeader(category);
+        categoryArray.forEach(category => {
+            const menuContent = document.querySelector('div#menu-content');
 
-        categorySection.appendChild(header);
-        menuContent.appendChild(categorySection);
+            const categorySection = createCategory(category);
+            const header = createHeader(category);
+
+            categorySection.appendChild(header);
+            menuContent.appendChild(categorySection);
+        });
     }
 
-    const addItem = function (item) {
-        
-        const newItem = createMenuItem(item);
-        const itemCategory = item.category;
-        
-        const categorySection = document.querySelector(`section#${itemCategory}`);
+    const addItems = function (itemsArray) {
 
-        console.log(newItem);
-        categorySection.appendChild(newItem);
+        itemsArray.forEach(item => {
+            const newItem = createMenuItem(item);
+            const itemCategory = item.category;
+        
+            const categorySection = document.querySelector(`section#${itemCategory}`);
+
+            categorySection.appendChild(newItem);
+        }); 
     }
 
-    return {createContainer, assembleDetails, addItem };
+    return {createContainer, assembleDetails, addItems };
 })();
 
 export { addMenuList };

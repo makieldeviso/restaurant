@@ -1,8 +1,11 @@
-import { addMenuList } from "./addMenuList";
 import { menuList } from "./menuList";
-
+import { addMenuList } from "./addMenuList";
+import { homeContent } from "./homeContent";
+import { addHomeContent } from "./addHomeContent";
 
 const changeContent = (function () {
+    const mainContent = document.querySelector('div#content');
+
     // Toggle between tabs
     const changeTab = function () {
         const open = this.dataset.open === 'open';
@@ -32,14 +35,19 @@ const changeContent = (function () {
         const changeContent = function (button) {
             const newPage = button.value;
 
-            const mainContent = document.querySelector('div#content');
-
             // Removes the direct div child of mainContent before appending new tab
             const contentContainer = document.querySelector('div#content>div');
             mainContent.removeChild(contentContainer);
 
             // Appends new tab according to button Press
             if (newPage === 'home') {
+                // Create home-content div container
+                addHomeContent.createContainer();
+
+                // Appends the contents to the home-content
+                homeContent.addContent();
+
+                // Set attribute of the mainContainer
                 mainContent.setAttribute('data-content', 'home');
 
             } else if (newPage === 'menu') {
@@ -66,7 +74,19 @@ const changeContent = (function () {
         changeContent(this);
     }
 
-    return {changeTab}
+    const onLoadPage = function () {
+        // Append home-content as default content on load
+        // Create home-content div container
+        addHomeContent.createContainer();
+
+        // Appends the contents to the home-content
+        homeContent.addContent();
+
+        // Set attribute of the mainContainer
+        mainContent.setAttribute('data-content', 'home');
+    }
+
+    return {changeTab, onLoadPage}
 })();
 
 export { changeContent };
