@@ -35,6 +35,7 @@ const addHomeContent = (function () {
         stripDiv.setAttribute('class', 'strip');
 
         const stripContent = document.createElement('p');
+        stripContent.setAttribute('class', 'strip-text');
         stripContent.textContent = `${item}`;
 
         stripDiv.appendChild(stripContent);

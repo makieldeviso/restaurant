@@ -4,7 +4,7 @@ import { homeContent } from "./homeContent";
 import { addHomeContent } from "./addHomeContent";
 
 const changeContent = (function () {
-    const mainContent = document.querySelector('div#content');
+    
 
     // Toggle between tabs
     const changeTab = function () {
@@ -20,19 +20,16 @@ const changeContent = (function () {
             if (!open) {
                 // Set open btn to close, before opening new btn
                 const tabBtns = document.querySelectorAll('div#tab-btns button');
-                tabBtns.forEach(btn => {
-                    if (btn.dataset.open === 'open') {
-                        btn.setAttribute('data-open', 'close');
-                    }
-                });
+                tabBtns.forEach(btn => btn.setAttribute('data-open', 'close'));
 
                 // Opens new Btn
-                button.setAttribute('data-open', 'open');
+                tabButton.setAttribute('data-open', 'open');
             }
         };
 
         // Content Events Function
         const changeContent = function (button) {
+            const mainContent = document.querySelector('div#content');
             const newPage = button.value;
 
             // Removes the direct div child of mainContent before appending new tab
@@ -67,6 +64,10 @@ const changeContent = (function () {
                 mainContent.setAttribute('data-content', 'contact');
             }
 
+            // Ensures that at tab change, the main is on top
+            const main = document.querySelector('main');
+            main.scrollIntoView({ behavior: "auto", block: "start", inline: "nearest" });
+
         };
 
         // Executes functions
@@ -77,6 +78,7 @@ const changeContent = (function () {
     const onLoadPage = function () {
         // Append home-content as default content on load
         // Create home-content div container
+        const mainContent = document.querySelector('div#content');
         addHomeContent.createContainer();
 
         // Appends the contents to the home-content
