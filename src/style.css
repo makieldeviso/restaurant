@@ -273,9 +273,84 @@ img.menu-img {
 
 /* Menu end - */
 
+/* Contact start - */
 
+/* Contact end - */
 
+div#contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--common-margin)  * 3);
+    align-items: center;
+    margin: auto;
+}
 
+img#lounge-img {
+    width: 100%;
+    height: calc(20vh + 3vw);   
+    object-fit: cover;
+}
+
+div.contact-detail {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+div.contact-detail img {
+    width: calc(30px + 1vw);
+    height: calc(30px + 1vw);
+    border-radius: 50%;
+    border: 1px solid var(--base-red);
+    padding: calc(var(--common-padding) * 0.5);
+    object-fit: cover;
+    background-color: var(--light-gray);
+}
+
+div.reserve img {
+    width: calc(40px + 1vw);
+    height: calc(40px + 1vw);
+    margin-bottom: var(--common-margin);
+}
+
+div.contact-detail h3 {
+    color: var(--base-red);
+    font-family: var(--slogan-font-style);
+    font-size: var(--common-font-size);
+    margin-bottom: var(--common-margin);
+}
+
+div.contact-detail p {
+    color: var(--light-gray);
+    margin-bottom: calc(var(--common-margin) * 0.5);
+    font-size: calc(var(--common-font-size) * 0.7);
+}
+
+div#contact-call.reserve p,
+div#contact-msg.reserve p {
+    font-size: calc(var(--common-font-size) * 0.8);
+}
+
+div#reserve-cont {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-auto-rows: max-content;
+    gap: var(--common-margin);
+}
+
+div.reserve {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: calc(var(--common-margin) * 2);
+}
+
+h3#reserve-header {
+    width: 100%;
+    text-align: center;
+    font-size: calc(var(--common-font-size) * 1.5);
+}
 
 
 
