@@ -6,6 +6,7 @@ import { addDomStructure } from './apps/addDomStructure';
 import { addHeaderContent } from './apps/addHeaderContent';
 import { addMainContent } from './apps/addMainContent';
 import { addFooterContent } from './apps/addFooterContent';
+import { addContactContent } from './apps/addContactContent';
 
 // Append basic DOM elements;
 addDomStructure.appendBodyElements();
@@ -30,4 +31,5 @@ addFooterContent.appendFooterContent();
 const tabBtns = document.querySelectorAll('div#tab-btns button');
 tabBtns.forEach(btn => btn.addEventListener('click', changeContent.changeTab));
 
-
+console.log(addContactContent.location);
+console.log(addContactContent.schedule);

@@ -274,9 +274,6 @@ img.menu-img {
 /* Menu end - */
 
 /* Contact start - */
-
-/* Contact end - */
-
 div#contact-content {
     display: flex;
     flex-direction: column;
@@ -328,7 +325,7 @@ div.contact-detail p {
 }
 
 div#contact-call.reserve p,
-div#contact-msg.reserve p {
+div#contact-message.reserve p {
     font-size: calc(var(--common-font-size) * 0.8);
 }
 
@@ -352,15 +349,7 @@ h3#reserve-header {
     font-size: calc(var(--common-font-size) * 1.5);
 }
 
-
-
-
-
-
-
-
-
-
+/* Contact end - */
 /* MAIN (end) */
 
 /* FOOTER (start) */
