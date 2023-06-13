@@ -2,6 +2,8 @@ import { menuList } from "./menuList";
 import { addMenuList } from "./addMenuList";
 import { homeContent } from "./homeContent";
 import { addHomeContent } from "./addHomeContent";
+import { contactContent } from "./contactContent";
+import { addContactContent } from "./addContactContent";
 
 const changeContent = (function () {
     
@@ -39,8 +41,6 @@ const changeContent = (function () {
             // Appends new tab according to button Press
             if (newPage === 'home') {
                 // Create home-content div container
-                addHomeContent.createContainer();
-
                 // Appends the contents to the home-content
                 homeContent.addContent();
 
@@ -49,8 +49,6 @@ const changeContent = (function () {
 
             } else if (newPage === 'menu') {
                 // Create menu-content div container
-                addMenuList.createContainer();
-
                 // Appends the section categories
                 menuList.addMenuCategory();
 
@@ -61,6 +59,11 @@ const changeContent = (function () {
                 mainContent.setAttribute('data-content', 'menu');
 
             } else if (newPage === 'contact') {
+                // Create home-content div container and 
+                // Appends the contents to the contact-content
+                contactContent.addContent();
+
+                // Set attribute of the mainContainer
                 mainContent.setAttribute('data-content', 'contact');
             }
 
@@ -77,10 +80,9 @@ const changeContent = (function () {
 
     const onLoadPage = function () {
         // Append home-content as default content on load
-        // Create home-content div container
         const mainContent = document.querySelector('div#content');
-        addHomeContent.createContainer();
 
+        // Create home-content div container
         // Appends the contents to the home-content
         homeContent.addContent();
 

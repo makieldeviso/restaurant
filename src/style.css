@@ -144,13 +144,19 @@ main {
 }
 
 div#content {
-    /* border: 1px solid black; */
     width: 95%;
     min-width: var(--min-width);
     margin: auto;
     margin-bottom: var(--common-margin);
     padding: var(--common-padding);
 }
+
+div#content[data-content="contact"] {
+    width: 100%;
+    padding: 0;
+    margin-bottom: calc(var(--common-padding) * 5);
+}
+
 div.home-text {
     margin-bottom: calc(var(--common-margin) * 2);
 }

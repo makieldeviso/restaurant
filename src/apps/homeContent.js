@@ -1,7 +1,6 @@
 import { addHomeContent } from "./addHomeContent";
 
 const homeContent = (function () {
-``
     class HomeContent {
         constructor (slogan, message, image, imageAlt) {
             this.slogan = slogan;
@@ -28,6 +27,9 @@ const homeContent = (function () {
     const stripText1 = "PORK - BEEF - CHICKEN - BEER - SEAFOOD - COCKTAIL - REFRESHMENTS";
 
     const addContent = function () {
+        // Creates home-content div
+        addHomeContent.createContainer();
+
         const mainContent1 = addHomeContent.createContent(content1);
         const mainContent2 = addHomeContent.createContent(content2);
         const mainStrip1 = addHomeContent.createStrip(stripText1);

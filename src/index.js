@@ -31,5 +31,3 @@ addFooterContent.appendFooterContent();
 const tabBtns = document.querySelectorAll('div#tab-btns button');
 tabBtns.forEach(btn => btn.addEventListener('click', changeContent.changeTab));
 
-console.log(addContactContent.location);
-console.log(addContactContent.schedule);

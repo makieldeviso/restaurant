@@ -34,6 +34,7 @@ const menuList = (function () {
 
 
     const addMenuCategory = function () {
+        addMenuList.createContainer();
         addMenuList.assembleDetails(categories);
     }    
 

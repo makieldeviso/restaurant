@@ -64,7 +64,6 @@ const addMenuList = (function () {
     }
 
     const assembleDetails = function (categoryArray) {
-
         categoryArray.forEach(category => {
             const menuContent = document.querySelector('div#menu-content');
 
