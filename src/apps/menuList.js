@@ -204,7 +204,12 @@ const menuList = (function () {
 
     const addMenuCategory = function () {
         addMenuList.createContainer();
+
+        // Append menu navbar to the header
+        addMenuList.createNavBar(categories);
+        
         addMenuList.assembleDetails(categories);
+
     }    
 
     const addMenuItems = function () {

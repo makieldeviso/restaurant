@@ -4,6 +4,7 @@ import { homeContent } from "./homeContent";
 import { addHomeContent } from "./addHomeContent";
 import { contactContent } from "./contactContent";
 import { addContactContent } from "./addContactContent";
+import { sizeAdjust } from "./sizeAdjust";
 
 const changeContent = (function () {
     
@@ -38,6 +39,12 @@ const changeContent = (function () {
             const contentContainer = document.querySelector('div#content>div');
             mainContent.removeChild(contentContainer);
 
+            // Removes menu navbar from header if it exist
+            addMenuList.removeNavBar();
+
+            // Readjust main size upon add/ remove of menu navbar
+            sizeAdjust.adjustMainSize();
+
             // Appends new tab according to button Press
             if (newPage === 'home') {
                 // Create home-content div container
@@ -51,6 +58,9 @@ const changeContent = (function () {
                 // Create menu-content div container
                 // Appends the section categories
                 menuList.addMenuCategory();
+
+                // Readjust main size upon add/ remove of menu navbar
+                sizeAdjust.adjustMainSize();
 
                 // Adds menu items into corresponding section category
                 menuList.addMenuItems();

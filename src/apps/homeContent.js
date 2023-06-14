@@ -24,7 +24,15 @@ const homeContent = (function () {
         "Friends enjoying their drinks while talking"
     );
 
-    const stripText1 = "PORK - BEEF - CHICKEN - BEER - SEAFOOD - COCKTAIL - REFRESHMENTS";
+    const content3 = new HomeContent (
+        "QUENCH YOUR THIRST THEN RESUME TO HUSTLE",
+        "Join us and savor a tantalizing oasis of flavors, as we invite you to satiate your parched palate and indulge in our invigorating libations.",
+        "./assets/preview-3.jpg",
+        "Bartender serving refreshments"
+    );
+
+    const stripText1 = "PORK - BEEF - CHICKEN";
+    const stripText2 = "BEER - COCKTAILS - REFRESHMENTS";
 
     const addContent = function () {
         // Creates home-content div
@@ -32,9 +40,11 @@ const homeContent = (function () {
 
         const mainContent1 = addHomeContent.createContent(content1);
         const mainContent2 = addHomeContent.createContent(content2);
+        const mainContent3 = addHomeContent.createContent(content3);
         const mainStrip1 = addHomeContent.createStrip(stripText1);
+        const mainStrip2 = addHomeContent.createStrip(stripText2);
 
-        const contentArray = [mainContent1, mainStrip1, mainContent2];
+        const contentArray = [mainContent1, mainStrip1, mainContent2, mainStrip2, mainContent3];
 
         addHomeContent.appendContent(contentArray);
 

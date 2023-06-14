@@ -116,7 +116,6 @@ const addContactContent = (function () {
         infoArray.forEach(info => infoCont.appendChild(info));
         
         // Return info container with all info inside
-        console.log(args.length);
         return infoCont;
     }   
     
