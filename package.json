@@ -1,12 +1,13 @@
 {
-  "name": "restaurant",
+  "name": "Heartbreak Pub",
   "version": "1.0.0",
-  "description": "Restaurant Webpage",
+  "description": "Hearbreak Pub Webpage",
   "main": "index.js",
   "private": true,
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js --open",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "deployBuild": "git subtree push --prefix dist origin gh-pages"
   },
   "repository": {
     "type": "git",
