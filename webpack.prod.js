@@ -6,6 +6,8 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 module.exports = merge (common, {
     mode: "production",    
     output: {
@@ -27,6 +29,12 @@ module.exports = merge (common, {
                 collapseWhiteSpace: true,
                 removeComments: true
             }
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+                {   from: 'src/assets',
+                    to: 'assets' }
+            ],
         }),
     ],
     module: {
