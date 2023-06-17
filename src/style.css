@@ -68,7 +68,9 @@ header {
     min-width: var(--min-width);
 
     position: fixed;
-    top: 0;
+    left: 0;
+    right: 0;
+    top: 0; 
     z-index: 1;
 }
 
@@ -79,6 +81,7 @@ div#page-title {
     background-color: var(--base-black);
     padding: calc(var(--common-padding) * 2);
     padding-right: calc(var(--common-padding) + var(--logo-size));
+    align-items: center;
 }   
 
 img#logo {
@@ -156,10 +159,6 @@ div#content[data-content="contact"] {
     margin-bottom: calc(var(--common-padding) * 5);
 }
 
-/* div#content[data-content="menu"] {
-    margin-top: calc(50px + 1vw);
-} */
-
 div.home-text {
     margin-bottom: calc(var(--common-margin) * 2);
 }
@@ -211,16 +210,9 @@ p.strip-text {
     white-space: nowrap;
     animation: strip 20s linear infinite;
     z-index: -2;
-    /* color: transparent; */
 }
 
 /* Menu start - */
-/* nav#menu-nav {
-    position: fixed;
-    bottom: 90px;
-    left: 0;
-} */
-
 nav#menu-nav ul {
     display: flex;
     column-gap: calc(var(--common-padding) * 3);
@@ -242,11 +234,19 @@ nav#menu-nav li {
 nav#menu-nav li button {
     color: var(--base-brown);
     font-family: var(--common-font-style);
-    font-size: calc(var(--common-font-size) * 0.8);
+    font-size: calc(var(--common-font-size) * 0.7);
     background-color: transparent;
     border: none;
 }
 
+nav#menu-nav li button:hover {
+    cursor: pointer;
+    color: var(--light-gray);
+}
+
+nav#menu-nav li button:active {
+    transform: scale(1.1);
+}
 
 section.category {
     display: flex;
@@ -277,8 +277,8 @@ h4.menu-category {
 div.menu-item {
     display: grid;
     max-width: 500px;
+    height: 100%;
     grid-template-columns: 60% 40%;
-    /* grid-template-rows: 1fr 1fr; */
     gap: var(--common-margin);
     margin: auto;
 
@@ -310,9 +310,7 @@ img.menu-img {
     justify-self: center;
     object-fit: cover;
     border: 1px solid var(--base-brown);
-    /* box-shadow: 0 0 5px 3px var(--base-gray); */
 }
-
 /* Menu end - */
 
 /* Contact start - */
@@ -442,14 +440,6 @@ footer a:active {
 }
 /* FOOTER (end) */
 
-/* smooth nav scrolling */
-/* @media (prefers-reduced-motion: no-preference) {
-    *{
-      scroll-behavior: smooth;
-    }
-  } */
-
-
 /* GALAXY FOLD */
 @media only screen and (max-width: 280px) {
     :root {
@@ -457,7 +447,6 @@ footer a:active {
         --header-font-size: calc(0.6rem + 1vw);
         --slogan-font-size: calc(1.5rem + 1vw);
         --common-font-size: calc(0.8rem + 1vw);
-
         --logo-size: calc(40px + 0.5vw);
     }
 
@@ -468,7 +457,7 @@ footer a:active {
 }
 
 /* iPad Air */
-@media only screen and (min-width: 768px) and (max-width: 912px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
     div.home-text {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -498,8 +487,14 @@ footer a:active {
         grid-column: 2 / 3;
     }
 
-    div#menu-content {
-
+    @keyframes strip {
+        0% {
+            transform: translateX(100%);
+        }
+        
+        100% {
+            transform: translateX(-200%);
+        }
     }
 
     section.category {
@@ -507,10 +502,156 @@ footer a:active {
         margin: auto;
         margin-bottom: calc(var(--common-margin) * 2);
     }
-
 }
 
 /* laptop */
-@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+@media only screen and (min-width: 1024px) {
+    :root {
+        --title-font-size: calc(1.8rem + 0.5vw);
+        --header-font-size: calc(0.8rem + 0.5vw);
+        --slogan-font-size: calc(2.5rem + 0.5vw);
+        --common-font-size: calc(0.8rem + 0.5vw);
 
+        --logo-size: calc(40px + 0.5vw);
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+    }
+
+    div#page-title {
+        padding: var(--common-padding);
+        background: linear-gradient(0.25turn, 
+        var(--base-black),
+        var(--base-black),
+        rgba(23, 23, 23, 0.9));
+    }
+
+    h1#resto-name {
+        text-align: center;
+        justify-self: start;
+        margin: 0 var(--common-margin);
+    }
+
+    div#tab-btns {
+        height: 100%;
+        justify-content: end;
+        padding-right: var(--logo-size);
+        background: linear-gradient(0.25turn,
+        rgba(23, 23, 23, 0.9),
+        rgba(255, 250, 231, 0.9),
+        rgba(255, 250, 231, 0.9));
+    }
+
+    div#tab-btns button {
+        font-size: calc(var(--header-font-size) * 1);
+    }
+
+    div.home-text {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, max-content);
+        column-gap: calc(var(--common-margin) * 5);
+        width: 90%;
+        margin: auto;
+    }
+    
+    div#home-content h3 {
+        width: 80%;
+        min-width: 350px;
+        font-size: calc(var(--slogan-font-size) * 1.3);
+        align-self: end;
+    }
+
+    div.home-text p {
+        grid-row: 2 / 3;
+    }
+
+    img.home-img {
+        grid-row: 1 / 3;
+        width: 100%;
+        height: 500px;
+    }
+
+    div.home-text:nth-of-type(3) p,
+    div.home-text:nth-of-type(3) h3 {
+        padding-left: calc(var(--common-padding) * 2);
+        grid-column: 2 / 3;
+    }
+
+    @keyframes strip {
+        0% {
+            transform: translateX(100%);
+        }
+        
+        100% {
+            transform: translateX(-200%);
+        }
+    }
+
+    /* Menu */
+    nav#menu-nav {
+        grid-column: 1 / 3;
+    }
+
+    nav#menu-nav li {
+        width: max-content;
+        margin: 0 var(--common-margin);
+    }
+
+    section.category {
+        width: 100%;
+        margin: auto;
+        margin-bottom: calc(var(--common-margin) * 2);
+
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+
+    h4.menu-category {
+        grid-column: 1 / -1;
+        width: 50%;
+        margin: auto;
+    }
+
+    div.contact-detail {
+        max-width: 800px;
+    }
+
+    h3#reserve-header {
+        margin-bottom: calc(var(--common-margin) * 3);
+    }
+    h5.item-name, p.item-price {
+        font-size: var(--common-font-size);
+    }
+
+    p.item-description {
+        font-size: calc(var(--common-font-size) * 0.7);
+    }
+
+    div#end-mark {
+        height: 20vh;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    section.category {
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    }
+}
+
+/* 4K */
+@media only screen and (min-width: 2000px) {
+    header, main, footer {
+        width: 2000px;
+        margin: auto;
+    }
+
+    body {
+        width: max-content;
+        margin: auto;
+        box-shadow: 0 0 30px 3px var(--base-red);
+    }
 }

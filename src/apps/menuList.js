@@ -19,7 +19,7 @@ const menuList = (function () {
     // Create menu items here (start) -
     const item1 = new MenuItem (
         "LECHON KAWALI",
-        "250.00",
+        "349.00",
         "Crispy deep-fried pork belly, served with a side of traditional dipping sauce, combining irresistible crispy skin with tender meat.",
         "./assets/menu/lechon-kawali.jpg",
         "pork"
@@ -27,7 +27,7 @@ const menuList = (function () {
 
     const item2 = new MenuItem (
         "SIZZLING SISIG",
-        "250.00",
+        "249.00",
         "Chopped and grilled pig's face and ears, seasoned with various spices and tangy calamansi juice, Served on a sizzling plate for a flavorful and satisfying experience.",
         "./assets/menu/sisig.jpg",
         "pork"
@@ -35,7 +35,7 @@ const menuList = (function () {
 
     const item3 = new MenuItem (
         "CRISPY LECHON BELLY",
-        "250.00",
+        "399.00",
         "Slow roasted, marinated prime cut pork belly, with harmonious fusion of a crispy, crackling skin and tender, succulent meat.",
         "./assets/menu/lechon-belly.jpg",
         "pork"
@@ -43,7 +43,7 @@ const menuList = (function () {
 
     const item4 = new MenuItem (
         "GRILLED LIEMPO",
-        "250.00",
+        "299.00",
         "Made from succulent slices of pork belly, meticulously seasoned and expertly grilled to perfection, this dish offers a tantalizing fusion of smoky charred notes and savory juiciness",
         "./assets/menu/liempo.jpg",
         "pork"
@@ -51,7 +51,7 @@ const menuList = (function () {
 
     const item5 = new MenuItem (
         "STEAK",
-        "250.00",
+        "549.00",
         "Handpicked prime beef steak, meticulously aged for optimal tenderness. Perfectly seared with rich buttery flavors with a hint of smokiness for a truly unforgettable dining sensation.",
         "./assets/menu/steak.jpg",
         "beef"
@@ -59,7 +59,7 @@ const menuList = (function () {
 
     const item6 = new MenuItem (
         "HEARTBREAK BURGER",
-        "250.00",
+        "149.00",
         "Signature beef hamburger, meticulously prepared with high-quality ground beef. Seasoned to perfection with a juicy patty nestled within a soft bun in delectable combination of fresh toppings and condiments.",
         "./assets/menu/burger.jpg",
         "beef"
@@ -67,7 +67,7 @@ const menuList = (function () {
 
     const item7 = new MenuItem (
         "FILIPINO BEEF STEAK",
-        "250.00",
+        "349.00",
         "Tender slices of beef marinated in a blend of soy sauce, calamansi juice, and spices, resulting in a delightful fusion of savory and citrus notes. Served with sautéed onions.",
         "./assets/menu/beef-steak.jpg",
         "beef"
@@ -75,7 +75,7 @@ const menuList = (function () {
 
     const item8 = new MenuItem (
         "FRIED BUTTERED CHICKEN",
-        "250.00",
+        "349.00",
         "Juicy chicken pieces delicately fried to a golden crisp, then generously coated in a luscious butter glaze that adds a delightful richness to every bite.",
         "./assets/menu/buttered-chicken.jpg",
         "chicken"
@@ -83,7 +83,7 @@ const menuList = (function () {
 
     const item9 = new MenuItem (
         "BUFFALO WINGS",
-        "250.00",
+        "299.00",
         "Chicken wings expertly fried to a perfect crisp and coated in a mouthwatering buffalo sauce that strikes the perfect balance between spicy and tangy flavors. Served with a side of cool and creamy ranch dressing.",
         "./assets/menu/buffalo-wings.jpg",
         "chicken"
@@ -91,7 +91,7 @@ const menuList = (function () {
 
     const item10 = new MenuItem (
         "INASAL",
-        "250.00",
+        "299.00",
         "Marinated in a blend of tangy calamansi juice, garlic, lemongrass, and annatto. Tender chicken grilled to perfection, infusing it with a smoky and savory taste.",
         "./assets/menu/inasal.jpg",
         "chicken"
@@ -99,7 +99,7 @@ const menuList = (function () {
 
     const beer1 = new MenuItem (
         "BUCKET OF 6",
-        "250.00",
+        "399.00",
         "Choose a kind or a variety from available 500mL beer brands: Pale Pilsen, Red Pony, Light Apple, Light Lemon, Crown & Heisenberg.",
         "./assets/menu/bucket.jpg",
         "beer"
@@ -107,7 +107,7 @@ const menuList = (function () {
 
     const beer2 = new MenuItem (
         "BOTTLED BEER 500mL ",
-        "250.00",
+        "69.00",
         "Available 500mL beer brands: Pale Pilsen, Red Pony, Light Apple, Light Lemon, Crown & Heisenberg.",
         "./assets/menu/beer.jpg",
         "beer"
@@ -115,7 +115,7 @@ const menuList = (function () {
 
     const beer3 = new MenuItem (
         "CRAFT BEER 1 PINT",
-        "250.00",
+        "149.00",
         "A pint of house special beer, brewed utilizing premium malt varieties, carefully selected hops, and distinctive yeast strains.",
         "./assets/menu/craft-beer.jpg",
         "beer"
@@ -123,7 +123,7 @@ const menuList = (function () {
 
     const cocktail1 = new MenuItem (
         "PIÑA COLADA",
-        "250.00",
+        "199.00",
         "Tropical cocktail featuring rum, coconut cream, and pineapple juice. Served over ice and garnished with a pineapple wedge and cherry",
         "./assets/menu/pina-colada.jpg",
         "cocktails"
@@ -131,7 +131,7 @@ const menuList = (function () {
 
     const cocktail2 = new MenuItem (
         "MOJITO",
-        "250.00",
+        "129.00",
         "Combination of rum, lime juice, mint leaves, sugar, and soda water. Its invigorating flavors and muddled mint leaves evoke images of Caribbean beaches and provide a cool, refreshing experience",
         "./assets/menu/mojito.jpg",
         "cocktails"
@@ -139,7 +139,7 @@ const menuList = (function () {
 
     const cocktail3 = new MenuItem (
         "MARGARITA",
-        "250.00",
+        "129.00",
         "A classic cocktail made with tequila, lime juice, and orange liqueur, often served in a salt-rimmed glass. Its refreshing citrus flavors and balanced sweetness have made it a beloved choice for cocktail enthusiasts.",
         "./assets/menu/margarita.jpg",
         "cocktails"
@@ -147,7 +147,7 @@ const menuList = (function () {
 
     const cocktail4 = new MenuItem (
         "ESPRESSO MARTINI",
-        "250.00",
+        "149.00",
         "Combines vodka, coffee liqueur, and freshly brewed espresso, resulting in a sophisticated and energizing drink with balanced rich coffee notes and touch of sweetness.",
         "./assets/menu/espresso-martini.jpg",
         "cocktails"
@@ -155,7 +155,7 @@ const menuList = (function () {
 
     const cocktail6 = new MenuItem (
         "PALOMA",
-        "250.00",
+        "129.00",
         "Refreshing tequila-based cocktail that features grapefruit juice, lime juice, a pinch of salt and topped with soda water.",
         "./assets/menu/paloma.jpg",
         "cocktails"
@@ -163,7 +163,7 @@ const menuList = (function () {
 
     const refresh1 = new MenuItem (
         "LEMONADE",
-        "250.00",
+        "99.00",
         "Icy drink made with freshly squeezed lemon juice, water, and sweetened with honey.",
         "./assets/menu/lemonade.jpg",
         "refreshments"
@@ -171,7 +171,7 @@ const menuList = (function () {
 
     const refresh2 = new MenuItem (
         "MANGO SHAKE",
-        "250.00",
+        "99.00",
         "Luscious Mango Shake, blending ripe, juicy mangoes with creamy vanilla ice cream for a velvety, mouthwatering treat.",
         "./assets/menu/mango-shake.jpg",
         "refreshments"
@@ -179,7 +179,7 @@ const menuList = (function () {
 
     const refresh3 = new MenuItem (
         "AVOCADO SHAKE",
-        "250.00",
+        "99.00",
         "Nutritious Avocado Shake, crafted from ripe avocados, blended with condensed milk sweetness and cooling shaved ice.",
         "./assets/menu/avocado-shake.jpg",
         "refreshments"
@@ -187,7 +187,7 @@ const menuList = (function () {
 
     const refresh4 = new MenuItem (
         "FROZEN COLA",
-        "250.00",
+        "69.00",
         "Quench your thirst with our Frozen Cola, a frosty treat that combines the classic flavor of Cola-Cola with a delightful slushy texture. Cool down and enjoy the icy indulgence of this iconic beverage.",
         "./assets/menu/frozen-cola.jpg",
         "refreshments"
@@ -195,7 +195,7 @@ const menuList = (function () {
 
     const refresh5 = new MenuItem (
         "FRESHLY BREWED ICED TEA",
-        "250.00",
+        "89.00",
         "Enjoy the cool, revitalizing taste of our Iced Tea. Made from freshly brewed tea leaves, sweetened by natural honey and handsomely iced.",
         "./assets/menu/iced-tea.jpg",
         "refreshments"
@@ -209,7 +209,6 @@ const menuList = (function () {
         addMenuList.createNavBar(categories);
         
         addMenuList.assembleDetails(categories);
-
     }    
 
     const addMenuItems = function () {
@@ -217,7 +216,6 @@ const menuList = (function () {
     }
 
     return {addMenuCategory, addMenuItems};
-
 })();
 
 export { menuList };

@@ -16,7 +16,6 @@ const sizeAdjust = (function () {
     return {adjustMainSize};
 })();
 
-
 export {sizeAdjust};
 
 

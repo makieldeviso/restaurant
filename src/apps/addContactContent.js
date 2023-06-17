@@ -123,11 +123,9 @@ const addContactContent = (function () {
         const contactContent = document.querySelector('div#contact-content');
 
         contentArray.forEach(content => contactContent.appendChild(content));
-
     }
 
     return { createContainer, createImagePreview, createReserve, createInfo, appendContent };
-
 })();
 
 export { addContactContent };

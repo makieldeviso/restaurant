@@ -51,8 +51,6 @@ const homeContent = (function () {
     }
 
     return {addContent};
-
 })();
-
 
 export { homeContent };

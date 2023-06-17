@@ -1,14 +1,10 @@
 import { menuList } from "./menuList";
 import { addMenuList } from "./addMenuList";
 import { homeContent } from "./homeContent";
-import { addHomeContent } from "./addHomeContent";
 import { contactContent } from "./contactContent";
-import { addContactContent } from "./addContactContent";
 import { sizeAdjust } from "./sizeAdjust";
 
 const changeContent = (function () {
-    
-
     // Toggle between tabs
     const changeTab = function () {
         const open = this.dataset.open === 'open';
@@ -80,7 +76,6 @@ const changeContent = (function () {
             // Ensures that at tab change, the main is on top
             const main = document.querySelector('main');
             main.scrollIntoView({ behavior: "auto", block: "start", inline: "nearest" });
-
         };
 
         // Executes functions
