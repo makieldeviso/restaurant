@@ -9,9 +9,11 @@ module.exports = merge (common, {
     devServer: {
         static: "./src"
     }, 
+    
     optimization: {
         runtimeChunk: 'single',
     },
+
     output: {
         filename: "[name].bundle.js",
         path: path.resolve(__dirname, "dist")

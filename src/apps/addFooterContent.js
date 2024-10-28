@@ -17,19 +17,19 @@ const addFooterContent = (function () {
 
         // Foot Note 1
         const footNote1 = createFootNote();
-        footNote1.textContent = 'This is a portfolio project Made for The Odin Project';
+        footNote1.textContent = 'Restaurant portfolio project';
 
         // Foot Note 2
         const footNote2 = createFootNote();
         const noteIcon2 = '<i class="fa-regular fa-copyright"></i>';
-        footNote2.innerHTML = `Copyright ${noteIcon2} 2023 - Fred Mark Baldeviso`;
+        footNote2.innerHTML = `${noteIcon2} ${(new Date()).getFullYear()} Fred Mark Baldeviso`;
 
         // Foot Note 3
         const footNote3 = createFootNote();
         const noteLink3 = document.createElement('a');
         const noteIcon3 = '<i class="fa-brands fa-github"></i>';
         noteLink3.setAttribute('href', 'https://github.com/makieldeviso');
-        noteLink3.innerHTML = `makieldeviso ${noteIcon3}`;
+        noteLink3.innerHTML = `${noteIcon3} makieldeviso`;
         footNote3.appendChild(noteLink3);
 
         // Saves all content into an array
